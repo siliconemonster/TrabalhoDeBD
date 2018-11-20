@@ -1,0 +1,20 @@
+.bg-black{
+    background-color: #030303;
+}
+.nav {
+    padding: .2rem;
+}
+.nav a { 
+    padding: 10px;
+    color: #b8b8b8;
+}
+.nav li {
+    padding: 1px;
+}
+.navb .nav-item.active .nav-link,
+.nav .nav-item .nav-link.active {
+    color: #1a2850;
+}
+.nav .nav-item:hover .nav-link {
+    color: #1a2850;
+}
