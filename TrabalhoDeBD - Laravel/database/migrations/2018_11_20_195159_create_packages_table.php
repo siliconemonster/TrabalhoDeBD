@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreatePackagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('userID');
-            $table->string('username');
-            $table->integer('level');
-            $table->date('accountTime');
-            $table->binary('profilePic');
+        Schema::create('packages', function (Blueprint $table) {
+            $table->increments('packID');
+            $table->string('packName');
+            $table->date('packReleaseDate');
+            $table->float('packPrice');
+            $table->boolean('packSatus');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('packages');
     }
 }
