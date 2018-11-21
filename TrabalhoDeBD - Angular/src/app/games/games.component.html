@@ -1,3 +1,20 @@
-<p>
-  games works!
-</p>
+<div class="content">
+  <div class="text-center">
+    <h1>Games</h1>
+    <hr>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+      <ul class="list-group" *ngFor="let game of games$">
+        <li class="list-group-item"><b>ID:</b> {{ game.gameID }}</li>
+        <li class="list-group-item"><b>Name:</b> {{ game.gameName }}</li>
+        <li class="list-group-item"><b>Release Date:</b> {{ game.releaseDate }}</li>
+        <li class="list-group-item"><b>Price:</b> R${{ game.gamePrice }}</li>
+        <li class="list-group-item"><b>Amount of Reviews:</b> {{ game.amountOfReviews }}</li>
+        <li class="list-group-item"><b>Rating:</b> {{ game.rating }}</li>
+      </ul>
+  </div>
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+[
+  {
+    "gameID": 501300,
+    "gameName": "What Remains of Edith Finch",
+    "releaseDate": "21-04-2017",
+    "gamePrice": "R$36.99",
+    "amountOfReviews": "8896",
+    "rating" : "92.39"
+  },
+  {
+    "gameID": 8930,
+    "gameName": "Sid Meier's Civilization V",
+    "releaseDate": "21-09-2010",
+    "gamePrice": "44.99",
+    "amountOfReviews": "128492",
+    "rating" : "94.86"
+  },
+  {
+    "gameID": 323190,
+    "gameName": "Frostpunk",
+    "releaseDate": "24-04-2018",
+    "gamePrice": "38.85",
+    "amountOfReviews": "17401",
+    "rating" : "83.88"
+  }
+]

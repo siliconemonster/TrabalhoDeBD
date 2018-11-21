@@ -12,6 +12,8 @@ import { PackagesComponent } from './packages/packages.component';
 import { UsersComponent } from './users/users.component';
 import { TagsComponent } from './tags/tags.component';
 
+import { HttpClientModule } from '@angular/common/http'; //for my dummy db
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { TagsComponent } from './tags/tags.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
