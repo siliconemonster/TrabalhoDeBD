@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GamesComponent } from './games/games.component';
-import { CompaniesComponent } from './companies/companies.component';
-import { PackagesComponent } from './packages/packages.component';
-import { UsersComponent } from './users/users.component';
-import { TagsComponent } from './tags/tags.component';
-import { HomeComponent } from './home/home.component';
+import { GamesComponent } from './pages/games/games.component';
+import { CompaniesComponent } from './pages/companies/companies.component';
+import { PackagesComponent } from './pages/packages/packages.component';
+import { UsersComponent } from './pages/users/users.component';
+import { TagsComponent } from './pages/tags/tags.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
