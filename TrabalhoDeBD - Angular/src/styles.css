@@ -25,3 +25,17 @@ hr{
     font-size: 17px;
     color: #176fd4;
 }
+
+.search {
+    padding: 2rem;
+    background-color: #030303;
+}
+form pre {
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    color: #f3f3f3;
+}
+form label {
+    color: #fff;
+}

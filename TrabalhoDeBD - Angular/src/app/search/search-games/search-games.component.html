@@ -1,0 +1,39 @@
+<div class="search">
+  <h3><b>Search</b></h3>
+  <br>
+  <form>
+    <div class="form-group row">
+      <div class="col-2"><label for="gameName">NAME</label></div>
+      <div class="col-4"><input id="gameName" type="text" class="form-control form-control-sm"></div>
+    </div>
+    
+    <div class="form-group row">
+      <div class="col-2"><label for="gameName">PRICE RANGE</label></div>
+      <div class="col-1"><input id="minGamePrice" type="text" class="form-control form-control-sm"></div>
+      <div class="col-2"><pre>&le;  PRICE  &le;</pre></div>
+      <div class="col-1"><input id="maxGamePrice" type="text" class="form-control form-control-sm"></div>
+    </div>
+      
+    <div class="form-group row">
+      <div class="col-2"><label for="gameName">RATING</label></div>
+      <div class="col-1"><input id="minGameRating" type="text" class="form-control form-control-sm"></div>
+      <div class="col-2"><pre>&lt;  RATING  &lt;</pre></div>
+      <div class="col-1"><input id="maxGameRating" type="text" class="form-control form-control-sm"></div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-2"><label for="gameName">RELEASE YEAR</label></div>
+      <div class="col-1">
+        <select id="comparYear" type="text" class="form-control form-control-sm">
+          <option value="1">&lt;</option>
+          <option value="2">=</option>
+          <option value="3">&gt;</option>
+        </select>
+      </div>
+      <div class="col-1"><input id="gameYear" type="text" class="form-control form-control-sm"></div>
+    </div>
+    
+    <br>
+    <button class="btn btn-primary">Search</button>
+  </form>
+</div>
