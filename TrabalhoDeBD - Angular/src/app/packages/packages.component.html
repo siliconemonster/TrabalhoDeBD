@@ -1,3 +1,19 @@
-<p>
-  packages works!
-</p>
+<div class="content">
+  <div class="text-center">
+    <h1>Packages</h1>
+    <hr>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+        <ul class="col-12 col-sm-6 col-lg-4" *ngFor="let package of packages$">
+        <li class="list-group-item"><b>Package ID:</b> {{ package.packID }}</li>
+        <li class="list-group-item"><b>Package Name:</b> {{ package.packName }}</li>
+        <li class="list-group-item"><b>Package Release Date:</b> {{ package.packReleaseDate }}</li>
+        <li class="list-group-item"><b>Package Price:</b> R${{ package.packPrice }}</li>
+        <li class="list-group-item"><b>Package Status:</b> {{ package.packStatus }}</li>
+      </ul>
+  </div>
+  </div>
+
+</div>

@@ -6,13 +6,13 @@
 
   <div class="container-fluid">
   <div class="row">
-      <ul class="list-group" *ngFor="let game of games$">
-        <li class="list-group-item"><b>ID:</b> {{ game.gameID }}</li>
-        <li class="list-group-item"><b>Name:</b> {{ game.gameName }}</li>
-        <li class="list-group-item"><b>Release Date:</b> {{ game.releaseDate }}</li>
-        <li class="list-group-item"><b>Price:</b> R${{ game.gamePrice }}</li>
+      <ul class="col-12 col-sm-6 col-lg-4" *ngFor="let game of games$">
+        <li class="list-group-item"><b>Game ID:</b> {{ game.gameID }}</li>
+        <li class="list-group-item"><b>Game Name:</b> {{ game.gameName }}</li>
+        <li class="list-group-item"><b>Game Release Date:</b> {{ game.releaseDate }}</li>
+        <li class="list-group-item"><b>Game Price:</b> R${{ game.gamePrice }}</li>
         <li class="list-group-item"><b>Amount of Reviews:</b> {{ game.amountOfReviews }}</li>
-        <li class="list-group-item"><b>Rating:</b> {{ game.rating }}</li>
+        <li class="list-group-item"><b>Game Rating:</b> {{ game.rating }}</li>
       </ul>
   </div>
   </div>
