@@ -22,6 +22,7 @@ class CreateGamesTable extends Migration
             $table->float('rating');
             $table->integer('fk_Developer_Company_compID')->nullable()->unsigned();
             $table->integer('fk_Publisher_Company_compID')->nullable()->unsigned();
+            $table->integer('tagsID')->nullable()->unsigned();
             $table->timestamps();
         });
 
