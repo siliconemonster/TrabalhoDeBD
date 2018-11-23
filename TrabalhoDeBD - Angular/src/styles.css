@@ -13,7 +13,7 @@ p, h1, h2, h3, h4, h5 {
 .content {
     padding: 1rem;
 }
-hr{
+.content hr{
     height: 1px;
     margin-left: 28%;
     margin-right: 28%;
@@ -29,6 +29,12 @@ hr{
 .search {
     padding: 2rem;
     background-color: #030303;
+}
+.search hr {
+    height: 1px;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    background:#494949;
 }
 form pre {
     font-size: 17px;

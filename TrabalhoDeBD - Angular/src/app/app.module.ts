@@ -16,7 +16,10 @@ import { SearchTagsComponent } from './search/search-tags/search-tags.component'
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { ContactComponent } from './search/contact/contact.component'; //delete
+import { ContactComponent } from './search/contact/contact.component';
+import { SearchPackagesComponent } from './search/search-packages/search-packages.component';
+import { SearchCompaniesComponent } from './search/search-companies/search-companies.component';
+import { SearchUsersComponent } from './search/search-users/search-users.component'; //delete
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { ContactComponent } from './search/contact/contact.component'; //delete
     TagsComponent,
     ContactComponent,
     SearchGamesComponent,
-    SearchTagsComponent
+    SearchTagsComponent,
+    SearchPackagesComponent,
+    SearchCompaniesComponent,
+    SearchUsersComponent
   ],
   imports: [
     BrowserModule,

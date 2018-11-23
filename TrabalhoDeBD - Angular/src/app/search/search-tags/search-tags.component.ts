@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-search-tags',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchTagsComponent implements OnInit {
 
-  constructor() { }
+  tags$: object;
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.getTags().subscribe(
+      data => this.tags$ = data
+    )
   }
 
 }
