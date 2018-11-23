@@ -19,4 +19,6 @@ Route::resource('games', 'GameController');
 Route::resource('packages', 'PackageController');
 Route::resource('companies', 'CompanyController');
 Route::resource('users', 'UserController');
+Route::resource('tags', 'TagsController');
+Route::resource('relationshipsTagsGames', 'RelashioshipTagsGamesController');
 });

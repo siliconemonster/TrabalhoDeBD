@@ -13,7 +13,8 @@ class TagsController extends Controller
      */
     public function index()
     {
-        //
+      $tags = Tags::all();
+      return $tags->toJson();
     }
 
     /**
@@ -24,7 +25,9 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $novaTags = new Tags;
+      $novaTags->tagName = $request->tagName;
+      $novaTags->save();
     }
 
     /**
@@ -35,7 +38,8 @@ class TagsController extends Controller
      */
     public function show($id)
     {
-        //
+      $tags = Tags::findorfail($tagsID);
+      return $tags->toJson();
     }
 
     /**
@@ -47,7 +51,14 @@ class TagsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tags = Tags::findorfail($tagsID);
+
+        if($request->tagName){
+            $tags->tagName = $request->tagName;
+        }
+
+         $tags->save();
+         return $tags->toJson();
     }
 
     /**
@@ -58,6 +69,6 @@ class TagsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Tags::destroy($tagsID);
     }
 }
