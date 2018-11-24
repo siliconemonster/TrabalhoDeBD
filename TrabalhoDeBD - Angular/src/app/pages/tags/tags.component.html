@@ -1,0 +1,18 @@
+<app-search-tags></app-search-tags>
+
+<div class="content">
+  <div class="text-center">
+    <h1>Tags</h1>
+    <hr>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+      <ul class="col-12 col-sm-6 col-lg-4" *ngFor="let tag of tags$">
+        <li class="list-group-item"><b>Tag ID:</b> {{ tag.Tags_ID }}</li>
+        <li class="list-group-item"><b>Tag Name:</b> {{ tag.Tag_Name }}</li>
+      </ul>
+  </div>
+  </div>
+
+</div>

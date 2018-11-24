@@ -1,0 +1,21 @@
+<app-search-users></app-search-users>
+
+<div class="content">
+  <div class="text-center">
+    <h1>Users</h1>
+    <hr>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+      <ul class="col-12 col-sm-6 col-lg-4" *ngFor="let user of users$">
+        <li class="list-group-item"><b>User ID:</b> {{ user.userID }}</li>
+        <li class="list-group-item"><b>Username:</b> {{ user.username }}</li>
+        <li class="list-group-item"><b>User Level:</b> {{ user.level }}</li>
+        <li class="list-group-item"><b>Account Time:</b> {{ user.accountTime }}</li>
+        <li class="list-group-item"><b>Profile Picture:</b> {{ user.profilePic }}</li>
+      </ul>
+  </div>
+  </div>
+
+</div>

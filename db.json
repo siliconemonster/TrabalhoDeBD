@@ -1,0 +1,35 @@
+[
+  {
+    "gameID": 501300,
+    "gameName": "What Remains of Edith Finch",
+    "Description": "What Remains of Edith Finch is a collection of strange tales about a family in Washington state. As Edith, you’ll explore the colossal Finch house, searching for stories as she explores her family history and tries to figure out why she's the last one in her family left alive.",
+    "Icon": "https://steamcdn-a.opskins.media/steamcommunity/public/images/apps/501300/f71d2d0caa02bf35eafb5031a3d50c034a389605.jpg",
+    "Logo": "https://steamcdn-a.opskins.media/steamcommunity/public/images/apps/501300/290019afe6d1b5f5d95bdb78ae7e9df95c770a24.jpg",
+    "releaseDate": "21-04-2017",
+    "gamePrice": "R$36.99",
+    "amountOfReviews": "8896",
+    "rating" : "92.39"
+  },
+  {
+    "gameID": 8930,
+    "gameName": "Sid Meier's Civilization V",
+    "Description": "Create, discover, and download new player-created maps, scenarios, interfaces, and more!",
+    "Icon": "https://steamcdn-a.opskins.media/steamcommunity/public/images/apps/8930/fbe80c4743e226f0bf65559c91b12953d4446808.jpg",
+    "Logo": "https://steamcdn-a.opskins.media/steamcommunity/public/images/apps/8930/2203f62bd1bdc75c286c13534e50f22e3bd5bb58.jpg",
+    "releaseDate": "21-09-2010",
+    "gamePrice": "44.99",
+    "amountOfReviews": "128492",
+    "rating" : "94.86"
+  },
+  {
+    "gameID": 323190,
+    "gameName": "Frostpunk",
+    "Description": "Frostpunk is the first society survival game. As the ruler of the last city on Earth, it is your duty to manage both its citizens and its infrastructure. What decisions will you make to ensure your society's survival? What will you do when pushed to breaking point? Who will you become in the process?",
+    "Icon": "https://steamcdn-a.opskins.media/steamcommunity/public/images/apps/323190/0561084dfe24c469c905fe0681da82aa31102836.jpg",
+    "Logo": "https://steamcdn-a.opskins.media/steamcommunity/public/images/apps/323190/3312df2091d38a573958b7f953f4253c9dec9e86.jpg",
+    "releaseDate": "24-04-2018",
+    "gamePrice": "38.85",
+    "amountOfReviews": "17401",
+    "rating" : "83.88"
+  }
+]

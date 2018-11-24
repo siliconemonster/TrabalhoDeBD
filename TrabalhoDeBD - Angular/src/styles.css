@@ -1,0 +1,47 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+html, body { 
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #0b152e;
+}
+
+p, h1, h2, h3, h4, h5 {
+    color: #f3f3f3;
+}
+
+.content {
+    padding: 1rem;
+}
+.content hr{
+    height: 1px;
+    margin-left: 28%;
+    margin-right: 28%;
+    margin-bottom: 2.5rem;
+    background:#b3b3b3;
+}
+
+.row b {
+    font-size: 17px;
+    color: #176fd4;
+}
+
+.search {
+    padding: 2rem;
+    background-color: #030303;
+}
+.search hr {
+    height: 1px;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    background:#494949;
+}
+form pre {
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    color: #f3f3f3;
+}
+form label {
+    color: #fff;
+}
