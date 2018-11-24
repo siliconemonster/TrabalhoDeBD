@@ -28,4 +28,8 @@ class Game extends Model
     public function played_by() {
         return $this->belongsToMany('App\Models\User', 'games_played', 'gameID', 'userID');
     }
+
+    public function tags() {
+        return $this->belongsToMany('App\Models\Tag', 'game_tag', 'gameID', 'tagsID');
+    }
 }
