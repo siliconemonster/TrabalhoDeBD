@@ -8,6 +8,7 @@ class Company extends Model
 {
     protected $table = 'companies';
     protected $primaryKey = 'compID';
+    protected $fillable = ['compName'];
 
     public function publishes () {
         return $this->hasMany('App\Models\Game', 'fk_Publisher_Company_compID', 'compID');

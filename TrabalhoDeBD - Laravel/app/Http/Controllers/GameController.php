@@ -28,27 +28,19 @@ class GameController extends Controller
     {
       $novoGame = new Game;
 
-      $company = new Company;
+      $developer = Company::firstOrNew(['compName' => $request->devCompName]);
+      $developer->save();
 
-      $company->compName = $request->devCompName;
-      $company->save();
-      $fk_Developer_Company_compID  = $company->compID;
-
-      $company2 = new Company;
-
-      $company2->compName = $request->pubCompName;
-      $company2->save();
-      $fk_Publisher_Company_compID  = $company2->compID;
+      $publisher = Company::firstOrNew(['compName' => $request->pubCompName]);
+      $publisher->save();
 
       $novoGame->gameName = $request->gameName;
       $novoGame->releaseDate = $request->releaseDate;
       $novoGame->gamePrice = $request->gamePrice;
       $novoGame->amountOfReviews = $request->amountOfReviews;
       $novoGame->rating = $request->rating;
-      //$novoGame->fk_Developer_Company_compID = $fk_Developer_Company_compID;
-      //$novoGame->fk_Publisher_Company_compID = $fk_Publisher_Company_compID;
-      $novoGame->published_by()->associate($company2);
-      $novoGame->developed_by()->associate($company);
+      $novoGame->published_by()->associate($publisher);
+      $novoGame->developed_by()->associate($developer);
       $novoGame->save();
     }
 
