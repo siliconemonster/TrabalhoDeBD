@@ -20,6 +20,7 @@ import { ContactComponent } from './search/contact/contact.component';
 import { SearchPackagesComponent } from './search/search-packages/search-packages.component';
 import { SearchCompaniesComponent } from './search/search-companies/search-companies.component';
 import { SearchUsersComponent } from './search/search-users/search-users.component'; //delete
+import { GamesService } from './services/games.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,11 @@ import { SearchUsersComponent } from './search/search-users/search-users.compone
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    GamesService
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
