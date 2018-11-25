@@ -15,7 +15,7 @@ class CreatePackagesTable extends Migration
     {
         Schema::create('packages', function (Blueprint $table) {
             $table->increments('packID');
-            $table->string('packName');
+            $table->string('packName')->unique();
             $table->date('packReleaseDate');
             $table->float('packPrice');
             $table->boolean('packStatus');

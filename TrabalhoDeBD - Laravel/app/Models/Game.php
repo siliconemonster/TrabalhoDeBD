@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
 {
-    protected $primarykey = 'gameID';
+    protected $primaryKey = 'gameID';
 
     public function packages()
     {
@@ -30,6 +30,6 @@ class Game extends Model
     }
 
     public function tags() {
-        return $this->belongsToMany('App\Models\Tag', 'game_tag', 'gameID', 'tagsID');
+        return $this->belongsToMany('App\Models\Tag', '_relationship_tags_games', 'fk_gameID', 'fk_tagsID');
     }
 }

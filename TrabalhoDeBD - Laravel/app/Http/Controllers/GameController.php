@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\{Company, Game};
 
 class GameController extends Controller
 {
@@ -27,26 +28,19 @@ class GameController extends Controller
     {
       $novoGame = new Game;
 
-      $company = new Company;
+      $developer = Company::firstOrNew(['compName' => $request->devCompName]);
+      $developer->save();
 
-      $company->compID = $request->fk_Developer_Company_compID;
-      $company->save();
-      $fk_Developer_Company_compID  = $company->compID;
-
-      $company2 = new Company;
-
-      $company2->compID = $request->fk_Publisher_Company_compID;
-      $company2->save();
-      $fk_Publisher_Company_compID  = $company2->compID;
+      $publisher = Company::firstOrNew(['compName' => $request->pubCompName]);
+      $publisher->save();
 
       $novoGame->gameName = $request->gameName;
       $novoGame->releaseDate = $request->releaseDate;
       $novoGame->gamePrice = $request->gamePrice;
       $novoGame->amountOfReviews = $request->amountOfReviews;
       $novoGame->rating = $request->rating;
-      $novoGame->fk_Developer_Company_compID = $fk_Developer_Company_compID;
-      $novoGame->fk_Publisher_Company_compID = $fk_Publisher_Company_compID;
-
+      $novoGame->published_by()->associate($publisher);
+      $novoGame->developed_by()->associate($developer);
       $novoGame->save();
     }
 

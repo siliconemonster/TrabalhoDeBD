@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Tag;
 
 class TagsController extends Controller
 {
@@ -13,7 +14,7 @@ class TagsController extends Controller
      */
     public function index()
     {
-      $tags = Tags::all();
+      $tags = Tag::all();
       return $tags->toJson();
     }
 
@@ -25,7 +26,7 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
-      $novaTags = new Tags;
+      $novaTags = new Tag;
       $novaTags->tagName = $request->tagName;
       $novaTags->save();
     }
@@ -38,7 +39,7 @@ class TagsController extends Controller
      */
     public function show($id)
     {
-      $tags = Tags::findorfail($tagsID);
+      $tags = Tag::findorfail($tagsID);
       return $tags->toJson();
     }
 
@@ -51,7 +52,7 @@ class TagsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $tags = Tags::findorfail($tagsID);
+        $tags = Tag::findorfail($tagsID);
 
         if($request->tagName){
             $tags->tagName = $request->tagName;
@@ -69,6 +70,6 @@ class TagsController extends Controller
      */
     public function destroy($id)
     {
-        Tags::destroy($tagsID);
+        Tag::destroy($tagsID);
     }
 }

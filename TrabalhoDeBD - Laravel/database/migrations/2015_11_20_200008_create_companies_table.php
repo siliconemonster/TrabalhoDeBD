@@ -15,9 +15,9 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->increments('compID');
-            $table->string('compName');
-            $table->string('basedIn_state');
-            $table->string('basedIn_country');
+            $table->string('compName')->unique();
+            $table->string('basedIn_state')->nullable();
+            $table->string('basedIn_country')->nullable();
             $table->timestamps();
         });
     }

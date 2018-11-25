@@ -15,10 +15,11 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
 Route::resource('games', 'GameController');
 Route::resource('packages', 'PackageController');
 Route::resource('companies', 'CompanyController');
 Route::resource('users', 'UserController');
 Route::resource('tags', 'TagsController');
 Route::resource('relationshipsTagsGames', 'RelashioshipTagsGamesController');
-});
