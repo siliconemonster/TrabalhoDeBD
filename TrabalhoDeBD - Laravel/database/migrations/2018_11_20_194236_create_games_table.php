@@ -15,7 +15,7 @@ class CreateGamesTable extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->increments('gameID');
-            $table->string('gameName');
+            $table->string('gameName')->unique();
             $table->date('releaseDate');
             $table->float('gamePrice');
             $table->integer('amountOfReviews');

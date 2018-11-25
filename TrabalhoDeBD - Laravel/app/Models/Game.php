@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
 {
-    protected $primarykey = 'gameID';
+    protected $primaryKey = 'gameID';
 
     public function packages()
     {

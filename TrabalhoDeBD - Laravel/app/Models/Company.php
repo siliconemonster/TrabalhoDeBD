@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Company extends Model
 {
     protected $table = 'companies';
-    protected $primarykey = 'compID';
+    protected $primaryKey = 'compID';
 
     public function publishes () {
         return $this->hasMany('App\Models\Game', 'fk_Publisher_Company_compID', 'compID');

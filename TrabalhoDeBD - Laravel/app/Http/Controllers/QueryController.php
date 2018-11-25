@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Package\Models;
+use App\Models\{Company, Game, Package, Tag, User};
 
 class QueryController extends Controller {
     public function game_search(Request $request) {
