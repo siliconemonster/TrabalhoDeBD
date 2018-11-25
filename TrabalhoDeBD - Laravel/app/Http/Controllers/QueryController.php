@@ -8,7 +8,7 @@ use App\Models\{Company, Game, Package, Tag, User};
 use App\Http\Requests\GameSearch;
 
 class QueryController extends Controller {
-    public function game_search(GameSearch $request) {
+    public function game_search(Request $request) {
         $results = Game::where('gameName', '=', $request->gameName)
                                     ->whereBetween('gamePrice', [$request->minGamePrice, $request->maxGamePrice])
                                     ->whereBetween('rating', [$request->minGameRating, $request->maxGameRating])
