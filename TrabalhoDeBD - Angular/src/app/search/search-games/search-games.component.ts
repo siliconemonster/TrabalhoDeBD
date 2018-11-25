@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GamesService } from 'src/app/services/games.service';
 
 @Component({
   selector: 'app-search-games',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchGamesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public gamesService: GamesService) {}
 
   ngOnInit() {
+    
   }
 
+  onSubmitGames(searchGames) {
+    console.log(searchGames);
+  }
 }

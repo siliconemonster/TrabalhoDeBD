@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PackagesService } from 'src/app/services/packages.service';
 
 @Component({
   selector: 'app-search-packages',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPackagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public packegesService: PackagesService) { }
 
   ngOnInit() {
+
   }
 
+  onSubmitPackage(searchPackages) {
+    console.log(searchPackages);
+  }
+
+  onSubmitGamePackage(searcheGamePackage) {
+    console.log(searcheGamePackage);
+  }
 }

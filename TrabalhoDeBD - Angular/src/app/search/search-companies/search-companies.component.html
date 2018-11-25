@@ -1,13 +1,14 @@
 <div class="search">
     <h3><b>Search</b></h3>
     
-    <form>
+    <form #searchCompanies="ngForm" (ngSubmit)="onSubmitCompanies(searchCompanies)">
       <br>
       <div class="form-group row">
         <div class="col-3"><label for="companyName">Company's Published or Developed Games</label></div>
-        <div class="col-3"><input id="companyName" type="text" class="form-control form-control-sm"></div>
+        <div class="col-3"><input class="form-control form-control-sm" 
+          id="companyName" type="text" name="companyName" ngModel #companyName="ngModel"></div>
       </div>
       <br>
-      <button class="btn btn-primary">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>

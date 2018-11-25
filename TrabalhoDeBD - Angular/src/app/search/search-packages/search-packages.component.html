@@ -1,26 +1,28 @@
 <div class="search">
     <h3><b>Search</b></h3>
-    
-    <form>
+
+    <form #searchPackage="ngForm" (ngSubmit)="onSubmitPackage(searchPackage)">
       <br>
       <div class="form-group row">
         <div class="col-3"><label for="packageName">How much do you save with selected package</label></div>
-        <div class="col-3"><input id="packageName" type="text" class="form-control form-control-sm"></div>
+        <div class="col-3"><input class="form-control form-control-sm" 
+          id="packageName" type="text" name="packageName" ngModel #packageName="ngModel"></div>
       </div>
       <br>
-      <button class="btn btn-primary">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
     </form>
 
     <hr>
 
-    <form>
+    <form #searchGamePackage="ngForm" (ngSubmit)="onSubmitGamePackage(searchGamePackage)">
       <br>
       <div class="form-group row">
-        <div class="col-2"><label for="packageByGame">Packages by Game</label></div>
-        <div class="col-3"><input id="packageByGame" type="text" class="form-control form-control-sm"></div>
+        <div class="col-2"><label for="packageGame">Packages by Game</label></div>
+        <div class="col-3"><input class="form-control form-control-sm"
+          id="packageGame" type="text" name="packageGame" ngModel #packageGame="ngModel"></div>
       </div>
       <br>
-      <button class="btn btn-primary">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
     </form>
 
   </div>

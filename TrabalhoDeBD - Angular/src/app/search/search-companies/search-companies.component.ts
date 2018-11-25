@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompaniesService } from 'src/app/services/companies.service';
 
 @Component({
   selector: 'app-search-companies',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCompaniesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public companiesService: CompaniesService) {}
 
   ngOnInit() {
   }
 
+  onSubmitCompanies(searchCompanies) {
+    console.log(searchCompanies);
+  }
 }
