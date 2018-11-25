@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/data.service';
+import { CompaniesService } from 'src/app/services/companies.service';
 
 @Component({
   selector: 'app-companies',
@@ -8,14 +8,20 @@ import { DataService } from 'src/app/data.service';
 })
 export class CompaniesComponent implements OnInit {
 
-  companies$: object;
+  companies = [];
   
-  constructor(private data: DataService) { }
+  constructor(private companiesService: CompaniesService) {}
 
   ngOnInit() {
-    this.data.getCompanies().subscribe(
-      data => this.companies$ = data
-    )
+    this.getCompanies();
   }
 
+  getCompanies() {
+    this.companiesService.getCompanies().subscribe(
+      res => {
+        this.companies = res;
+        console.log(res);
+      }
+    )
+  }
 }

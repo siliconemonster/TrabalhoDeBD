@@ -1,44 +1,53 @@
 <div class="search">
     <h3><b>Search</b></h3>
     
-    <form>
+    <br>
+    <h5>About User</h5>
+    <form #searchUsers="ngForm" (ngSubmit)="onSubmitUsers(searchUsers)">
       <br>  
       <div class="form-group row">
-        <div class="col-2"><label for="userName">About User</label></div>
-        <div class="col-4"><input id="userName" type="text" class="form-control form-control-sm"></div>
+        <div class="col-2"><label for="userName">Username</label></div>
+        <div class="col-4"><input class="form-control form-control-sm" 
+          id="userName" type="text" name="userName" ngModel #userName="ngModel"></div>
       </div>
       
-      <button class="btn btn-primary">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
     </form>
 
     <hr>
 
-    <form>
+    <h5>Compare Libraries</h5>
+    <br>
+    <form #searchLibraries="ngForm" (ngSubmit)="onSubmitLibraries(searchLibraries)">
       <div class="form-group row">
-        <div class="col-2"><label>Compare Libraries</label></div>
-        <div class="col-2"><input id="comparUser1" type="text" class="form-control form-control-sm"></div>
+        <div class="col-2"><label>Libraries</label></div>
+        <div class="col-2"><input class="form-control form-control-sm" 
+          id="comparUser1" type="text" name="comparUser1" ngModel #comparUser1="ngModel"></div>
         <div class="col-1"><pre>X</pre></div>
-        <div class="col-2"><input id="comparUser2" type="text" class="form-control form-control-sm"></div>
+        <div class="col-2"><input class="form-control form-control-sm" 
+          id="comparUser2" type="text" name="comparUser2" ngModel #comparUser2="ngModel"></div>
       </div>
       
-      <button class="btn btn-primary">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
     </form>
 
     <hr>
 
     <h5>Relation Between User and Tag</h5>
     <br>
-    <form>
+    <form #searchUserTag="ngForm" (ngSubmit)="onSubmitUserTag(searchUserTag)">
       <div class="form-group row">
         <div class="col-1"><label for="relUser">User</label></div>
-        <div class="col-2"><input id="relUser" type="text" class="form-control form-control-sm"></div>
+        <div class="col-2"><input class="form-control form-control-sm" 
+          id="relUser" type="text" name="relUser" ngModel #relUser="ngModel"></div>
       </div>
 
       <div class="form-group row">
         <div class="col-1"><label for="relTag">Tag</label></div>
-        <div class="col-2"><input id="relTag" type="text" class="form-control form-control-sm"></div>
+        <div class="col-2"><input class="form-control form-control-sm" 
+          id="relTag" type="text" name="relTag" ngModel #relTag="ngModel"></div>
       </div>
       
-      <button class="btn btn-primary">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>

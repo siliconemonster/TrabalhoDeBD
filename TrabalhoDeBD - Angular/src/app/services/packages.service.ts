@@ -6,15 +6,15 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class GamesService {
+export class PackagesService {
 
-  GamesApiUrl: string = 'https://my-json-server.typicode.com/arcchi/dummy_db/games';
+  PackagesApiUrl: string = 'https://my-json-server.typicode.com/arcchi/dummy_db/packages';
 
   constructor(public http: HttpClient) {
     
   }
 
-  getGames():Observable<any> {
-    return this.http.get(this.GamesApiUrl).pipe(tap(res=> res));
+  getPackages():Observable<any> {
+    return this.http.get(this.PackagesApiUrl).pipe(tap(res=> res));
   }
 }

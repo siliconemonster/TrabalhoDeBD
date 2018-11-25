@@ -8,13 +8,13 @@ import { GamesService } from 'src/app/services/games.service';
 })
 export class SearchGamesComponent implements OnInit {
 
-  constructor(public gameService: GamesService) {}
+  constructor(public gamesService: GamesService) {}
 
   ngOnInit() {
-
+    
   }
 
-  searchGames() {
-    
+  onSubmitGames(searchGames) {
+    console.log(searchGames);
   }
 }

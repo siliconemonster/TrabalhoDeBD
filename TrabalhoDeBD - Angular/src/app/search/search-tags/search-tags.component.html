@@ -3,25 +3,27 @@
   <br>
 
   <h5>Information about Tag</h5>
-  <form>
+  <form #searchAboutTag="ngForm" (ngSubmit)="onSubmitAboutTag(searchAboutTag)">
     <br>  
     <div class="form-group row">
       <div class="col-1"><label for="tagName">TAG NAME</label></div>
-      <div class="col-3"><input id="tagName" type="text" class="form-control form-control-sm"></div>
+      <div class="col-3"><input class="form-control form-control-sm" 
+        id="tagName" type="text" name="tagName" ngModel #tagName="ngModel"></div>
     </div>
-    <button class="btn btn-primary">Search</button>
+    <button class="btn btn-primary" type="submit">Search</button>
   </form>
 
   <hr>
 
   <h5>Games with Tags</h5>
-  <form>
+  <form #searchGameTags="ngForm" (ngSubmit)="onSubmitGameTags(searchGameTags)">
     <br>
-    <div class="form-check form-check-inline" *ngFor="let tag of tags$">
-      <input class="form-check-input" type="checkbox" id="{{ tag.Tag_Name }}" value="{{ tag.Tag_Name }}">
+    <div class="form-check form-check-inline" *ngFor="let tag of tags">
+      <input class="form-check-input" type="checkbox" 
+      id="tag{{ tag.Tag_Name }}" value="{{ tag.Tag_Name }}" name="tag{{ tag.Tag_Name }}" ngModel #tagName="ngModel">
       <label class="form-check-label" for="{{ tag.Tag_Name }}">{{ tag.Tag_Name }}</label>
     </div>
     <br><br>
-    <button class="btn btn-primary">Search</button>
+    <button class="btn btn-primary" type="submit">Search</button>
   </form>
 </div>
