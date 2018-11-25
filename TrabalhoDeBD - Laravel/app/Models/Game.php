@@ -30,6 +30,6 @@ class Game extends Model
     }
 
     public function tags() {
-        return $this->belongsToMany('App\Models\Tag', 'game_tag', 'gameID', 'tagsID');
+        return $this->belongsToMany('App\Models\Tag', '_relationship_tags_games', 'fk_gameID', 'fk_tagsID');
     }
 }
