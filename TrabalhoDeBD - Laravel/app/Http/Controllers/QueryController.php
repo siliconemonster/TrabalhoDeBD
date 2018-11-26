@@ -74,4 +74,29 @@ class QueryController extends Controller {
     }
 
 
+
+    // API Queries
+    public function join_games_packages(Request $request) {
+        $game = Game::findOrFail($request->gameName);
+        $package = Package::findOrFail($request->packName);
+        $game->packages()->save($package);
+    }
+    
+    public function join_games_tags(Request $request) {
+        $game = Game::findOrFail($request->gameName);
+        $tag = Package::findOrFail($request->tagName);
+        $game->tags()->save($tag);
+    }
+
+    public function join_games_users_own(Request $request) {
+        $game = Game::findOrFail($request->gameName);
+        $user = Package::findOrFail($request->username);
+        $game->owned_by()->save($user);
+    }
+
+    public function join_games_users_play(Request $request) {
+        $game = Game::findOrFail($request->gameName);
+        $user = Package::findOrFail($request->username);
+        $game->played_by()->save($user);
+    }
 }

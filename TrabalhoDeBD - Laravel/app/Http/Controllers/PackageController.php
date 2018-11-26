@@ -30,7 +30,7 @@ class PackageController extends Controller
       $novoPackage->packName = $request->packName;
       $novoPackage->packReleaseDate = $request->packReleaseDate;
       $novoPackage->packPrice = $request->packPrice;
-      $novoPackage->packSatus = $request->packSatus;
+      $novoPackage->packStatus = $request->packSatus;
       $novoPackage->save();
     }
 

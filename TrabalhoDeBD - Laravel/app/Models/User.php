@@ -31,10 +31,10 @@ class User extends Authenticatable
     ];
 
     public function games_owned() {
-        return $this->belongsToMany('App\Models\Game', 'games_owned', 'userID', 'gameID');
+        return $this->belongsToMany('App\Models\Game', 'games_owned', 'fk_userID', 'fk_gameID');
     }
 
     public function games_played() {
-        return $this->belongsToMany('App\Models\Game', 'games_played', 'userID', 'gameID');
+        return $this->belongsToMany('App\Models\Game', 'games_played', 'fk_userID', 'fk_gameID');
     }
 }

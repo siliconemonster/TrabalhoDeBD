@@ -17,8 +17,8 @@ class CreateUsersTable extends Migration
             $table->string('username')->unique();
             $table->increments('userID');
             $table->integer('level');
-            $table->date('accountTime');
-            $table->string('profilePic');
+            $table->date('accountTime')->nullable();
+            $table->string('profilePic')->nullable();
             $table->timestamps();
         });
     }

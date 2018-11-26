@@ -10,7 +10,7 @@ class Game extends Model
 
     public function packages()
     {
-        return $this->belongsToMany('App\Models\Package', 'game_package', 'gameID', 'packID');
+        return $this->belongsToMany('App\Models\Package', 'game_package', 'fk_gameID', 'fk_packID');
     }
 
     public function published_by () {
@@ -22,11 +22,11 @@ class Game extends Model
     }
 
     public function owned_by() {
-        return $this->belongsToMany('App\Models\User', 'games_owned', 'gameID', 'userID');
+        return $this->belongsToMany('App\Models\User', 'games_owned', 'fk_gameID', 'fk_userID');
     }
 
     public function played_by() {
-        return $this->belongsToMany('App\Models\User', 'games_played', 'gameID', 'userID');
+        return $this->belongsToMany('App\Models\User', 'games_played', 'fk_gameID', 'fk_userID');
     }
 
     public function tags() {

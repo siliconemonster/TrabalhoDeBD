@@ -18,7 +18,7 @@ class CreatePackagesTable extends Migration
             $table->string('packName')->unique();
             $table->date('packReleaseDate');
             $table->float('packPrice');
-            $table->boolean('packStatus');
+            $table->boolean('packStatus')->nullable();
             $table->timestamps();
         });
     }
