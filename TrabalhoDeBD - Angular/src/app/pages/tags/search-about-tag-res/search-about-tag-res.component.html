@@ -1,0 +1,19 @@
+<app-search-tags></app-search-tags>
+
+<div class="content">
+  <div class="text-center">
+    <h1>About Tag</h1>
+    <hr>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+      <ul class="col-12 col-sm-6 col-lg-4" *ngFor="let res of resultados">
+        <li class="list-group-item"><b>Tag Name:</b> {{ res.Tag_Name }}</li>
+        <li class="list-group-item"><b>Number of Games:</b> {{ res.numberOfGames }}</li>
+        <li class="list-group-item"><b>Avarage Game Price:</b> {{ res.avgPrice }}</li>
+      </ul>
+  </div>
+  </div>
+
+</div>

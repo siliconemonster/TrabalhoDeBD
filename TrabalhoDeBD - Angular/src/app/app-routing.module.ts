@@ -6,6 +6,8 @@ import { PackagesComponent } from './pages/packages/packages.component';
 import { UsersComponent } from './pages/users/users.component';
 import { TagsComponent } from './pages/tags/tags.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SearchGameTagsResComponent } from './pages/tags/search-game-tags-res/search-game-tags-res.component';
+import { SearchAboutTagResComponent } from './pages/tags/search-about-tag-res/search-about-tag-res.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'tags',
     component: TagsComponent
+  },
+  {
+    path: 'tags/searchGameTags',
+    component: SearchGameTagsResComponent
+  },
+  {
+    path: 'tags/searchAboutTag',
+    component: SearchAboutTagResComponent
   }
 ];
 

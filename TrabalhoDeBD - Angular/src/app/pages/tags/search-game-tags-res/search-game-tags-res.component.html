@@ -1,0 +1,22 @@
+<app-search-tags></app-search-tags>
+
+<div class="content">
+  <div class="text-center">
+    <h1>Game Under Tags</h1>
+    <hr>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+      <ul class="col-12 col-sm-6 col-lg-4" *ngFor="let res of resultados">
+        <li class="list-group-item"><b>Game ID:</b> {{ game.gameID }}</li>
+        <li class="list-group-item"><b>Game Name:</b> {{ game.gameName }}</li>
+        <li class="list-group-item"><b>Game Release Date:</b> {{ game.releaseDate }}</li>
+        <li class="list-group-item"><b>Game Price:</b> R${{ game.gamePrice }}</li>
+        <li class="list-group-item"><b>Amount of Reviews:</b> {{ game.amountOfReviews }}</li>
+        <li class="list-group-item"><b>Game Rating:</b> {{ game.rating }}</li>
+      </ul>
+  </div>
+  </div>
+
+</div>

@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
 export class TagsService {
 
   TagsApiUrl: string = 'https://my-json-server.typicode.com/arcchi/dummy_db/tags';
+  AboutTagApiUrl: string = '';
+  GameTagsApiUrl: string = '';
 
   constructor(public http: HttpClient) {
     
@@ -16,5 +18,13 @@ export class TagsService {
 
   getTags():Observable<any> {
     return this.http.get(this.TagsApiUrl).pipe(tap(res=> res));
+  }
+
+  getResAboutTag():Observable<any> {
+    return this.http.get(this.AboutTagApiUrl).pipe(tap(res=> res));
+  }
+
+  getResGameTags():Observable<any> {
+    return this.http.get(this.GameTagsApiUrl).pipe(tap(res=> res));
   }
 }

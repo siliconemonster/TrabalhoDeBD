@@ -11,9 +11,9 @@ import { PackagesComponent } from './pages/packages/packages.component';
 import { UsersComponent } from './pages/users/users.component';
 import { TagsComponent } from './pages/tags/tags.component';
 
-
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { SearchPackagesComponent } from './search/search-packages/search-packages.component';
 import { SearchCompaniesComponent } from './search/search-companies/search-companies.component';
@@ -26,6 +26,8 @@ import { PackagesService } from './services/packages.service';
 import { UsersService } from './services/users.service';
 import { TagsService } from './services/tags.service';
 import { CompaniesService } from './services/companies.service';
+import { SearchAboutTagResComponent } from './pages/tags/search-about-tag-res/search-about-tag-res.component';
+import { SearchGameTagsResComponent } from './pages/tags/search-game-tags-res/search-game-tags-res.component';
 
 @NgModule({
   declarations: [
@@ -41,11 +43,14 @@ import { CompaniesService } from './services/companies.service';
     SearchTagsComponent,
     SearchPackagesComponent,
     SearchCompaniesComponent,
-    SearchUsersComponent
+    SearchUsersComponent,
+    SearchAboutTagResComponent,
+    SearchGameTagsResComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     HttpClientModule,
     FormsModule
   ],

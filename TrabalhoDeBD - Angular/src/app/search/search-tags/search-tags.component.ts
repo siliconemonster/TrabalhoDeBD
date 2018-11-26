@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TagsService } from 'src/app/services/tags.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-tags',
@@ -10,7 +11,7 @@ export class SearchTagsComponent implements OnInit {
 
   tags = [];
 
-  constructor(private tagsService: TagsService) { }
+  constructor(private tagsService: TagsService, public router: Router) { }
 
   ngOnInit() {
     this.getTags();
@@ -27,9 +28,11 @@ export class SearchTagsComponent implements OnInit {
 
   onSubmitAboutTag(searchAboutTags) {
     console.log(searchAboutTags);
+    this.router.navigateByUrl('tags/searchAboutTag');
   }
 
   onSubmitGameTags(searchTags) {
     console.log(searchTags);
+    this.router.navigateByUrl('tags/searchGameTags');
   }
 }
