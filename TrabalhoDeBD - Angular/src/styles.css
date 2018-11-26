@@ -10,6 +10,12 @@ p, h1, h2, h3, h4, h5 {
     color: #f3f3f3;
 }
 
+.home {
+    padding: 2rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
 .content {
     padding: 1rem;
 }

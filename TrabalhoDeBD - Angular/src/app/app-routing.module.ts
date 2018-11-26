@@ -8,6 +8,9 @@ import { TagsComponent } from './pages/tags/tags.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchGameTagsResComponent } from './pages/tags/search-game-tags-res/search-game-tags-res.component';
 import { SearchAboutTagResComponent } from './pages/tags/search-about-tag-res/search-about-tag-res.component';
+import { SearchGameResComponent } from './pages/games/search-game-res/search-game-res.component';
+import { SearchGamePackageResComponent } from './pages/packages/search-game-package-res/search-game-package-res.component';
+import { SearchPackageResComponent } from './pages/packages/search-package-res/search-package-res.component';
 
 const routes: Routes = [
   {
@@ -19,12 +22,24 @@ const routes: Routes = [
     component: GamesComponent
   },
   {
+    path: 'games/searchGames',
+    component: SearchGameResComponent
+  },
+  {
     path: 'companies',
     component: CompaniesComponent
   },
   {
     path: 'packages',
     component: PackagesComponent
+  },
+  {
+    path: 'packages/searchGamePackage',
+    component: SearchGamePackageResComponent
+  },
+  {
+    path: 'packages/searchPackage',
+    component: SearchPackageResComponent
   },
   {
     path: 'users',

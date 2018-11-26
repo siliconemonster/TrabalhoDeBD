@@ -1,0 +1,19 @@
+<app-search-packages></app-search-packages>
+
+<div class="content">
+  <div class="text-center">
+    <h1>Game Packages</h1>
+    <hr>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+      <ul class="col-12 col-sm-6 col-lg-4" *ngFor="let res of resultados">
+        <li class="list-group-item"><b>Package Name:</b> {{ res.packName }}</li>
+        <li class="list-group-item"><b>Package Price:</b> {{ res.packPrice }}</li>  
+        <li class="list-group-item"><b>Game Name:</b> {{ res.gameName }}</li>
+      </ul>
+  </div>
+  </div>
+
+</div>

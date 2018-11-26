@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
 export class PackagesService {
 
   PackagesApiUrl: string = 'https://my-json-server.typicode.com/arcchi/dummy_db/packages';
+  GamePackageResUrl: string = '';
+  PackageResUrl: string = '';
 
   constructor(public http: HttpClient) {
     
@@ -16,5 +18,13 @@ export class PackagesService {
 
   getPackages():Observable<any> {
     return this.http.get(this.PackagesApiUrl).pipe(tap(res=> res));
+  }
+
+  getResGamePackage():Observable<any> {
+    return this.http.get(this.GamePackageResUrl).pipe(tap(res=> res));
+  }
+
+  getResPackage():Observable<any> {
+    return this.http.get(this.PackageResUrl).pipe(tap(res=> res));
   }
 }

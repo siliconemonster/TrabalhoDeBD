@@ -28,6 +28,9 @@ import { TagsService } from './services/tags.service';
 import { CompaniesService } from './services/companies.service';
 import { SearchAboutTagResComponent } from './pages/tags/search-about-tag-res/search-about-tag-res.component';
 import { SearchGameTagsResComponent } from './pages/tags/search-game-tags-res/search-game-tags-res.component';
+import { SearchGameResComponent } from './pages/games/search-game-res/search-game-res.component';
+import { SearchPackageResComponent } from './pages/packages/search-package-res/search-package-res.component';
+import { SearchGamePackageResComponent } from './pages/packages/search-game-package-res/search-game-package-res.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { SearchGameTagsResComponent } from './pages/tags/search-game-tags-res/se
     SearchCompaniesComponent,
     SearchUsersComponent,
     SearchAboutTagResComponent,
-    SearchGameTagsResComponent
+    SearchGameTagsResComponent,
+    SearchGameResComponent,
+    SearchPackageResComponent,
+    SearchGamePackageResComponent
   ],
   imports: [
     BrowserModule,

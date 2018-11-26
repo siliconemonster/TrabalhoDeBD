@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PackagesService } from 'src/app/services/packages.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-packages',
@@ -8,7 +9,7 @@ import { PackagesService } from 'src/app/services/packages.service';
 })
 export class SearchPackagesComponent implements OnInit {
 
-  constructor(public packegesService: PackagesService) { }
+  constructor(public packegesService: PackagesService, public router: Router) { }
 
   ngOnInit() {
 
@@ -16,9 +17,11 @@ export class SearchPackagesComponent implements OnInit {
 
   onSubmitPackage(searchPackages) {
     console.log(searchPackages);
+    this.router.navigateByUrl('packages/searchPackage');
   }
 
   onSubmitGamePackage(searcheGamePackage) {
     console.log(searcheGamePackage);
+    this.router.navigateByUrl('packages/searchGamePackage');
   }
 }

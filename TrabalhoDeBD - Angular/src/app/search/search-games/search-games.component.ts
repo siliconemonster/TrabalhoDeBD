@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GamesService } from 'src/app/services/games.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-games',
@@ -8,7 +9,7 @@ import { GamesService } from 'src/app/services/games.service';
 })
 export class SearchGamesComponent implements OnInit {
 
-  constructor(public gamesService: GamesService) {}
+  constructor(public gamesService: GamesService, public router: Router) {}
 
   ngOnInit() {
     
@@ -16,5 +17,6 @@ export class SearchGamesComponent implements OnInit {
 
   onSubmitGames(searchGames) {
     console.log(searchGames);
+    this.router.navigateByUrl('games/searchGames');
   }
 }
